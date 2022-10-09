@@ -8,13 +8,20 @@ import { ProductService } from '../../services/product.service';
 })
 export class HomeComponent {
 
+  existError: boolean = false;
+
   constructor( private productService: ProductService) { this.showProducts() }
 
   showProducts(){
+    
+    this.existError = false;
+
     this.productService.getProducts()
-      .subscribe( resp => {
+      .subscribe( (resp) => {
         console.log(resp.data);
-      })
+      }, (err) => {
+        this.existError = true;
+      });
   }
 
 }
