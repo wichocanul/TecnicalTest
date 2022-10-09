@@ -1,15 +1,20 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
+import { ProductService } from '../../services/product.service';
 
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.css']
 })
-export class HomeComponent implements OnInit {
+export class HomeComponent {
 
-  constructor() { }
+  constructor( private productService: ProductService) { this.showProducts() }
 
-  ngOnInit(): void {
+  showProducts(){
+    this.productService.getProducts()
+      .subscribe( resp => {
+        console.log(resp.data);
+      })
   }
 
 }
