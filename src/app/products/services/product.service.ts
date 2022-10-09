@@ -2,6 +2,9 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 
+//Interfaces
+import { RestProductsResponse } from '../interfaces/products.interface';
+
 @Injectable({
   providedIn: 'root'
 })
@@ -11,9 +14,9 @@ export class ProductService {
 
   constructor( private http: HttpClient ) { }
 
-  getProducts(): Observable<any> {
+  getProducts(): Observable<RestProductsResponse> {
 
-    return this.http.get(this.apiUrl);
+    return this.http.get<RestProductsResponse>(this.apiUrl);
 
   }
 

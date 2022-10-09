@@ -42,17 +42,63 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <tr>
-                        <td>900C</td>
-                        <td>POLO POLIESTER SPORT CABALLERO</td>
-                        <td>AQUA</td>
-                        <td>6039</td>
-                        <td>0</td>
-                        <td>0</td>
-                        <td>0</td>
-                        <td>0</td>
-                        <td>0</td>
-                        <td>10</td>
+                    <tr *ngFor="let product of products"
+                    >
+                        <td>{{ product.ItmsGrpNam }}</td>
+                        <td>{{ product.ItemName}}</td>
+                        <td>{{ product.Color }}</td>
+                        
+                        <td [ngSwitch]="product.Talla">
+                            <span *ngSwitchCase="'S'">
+                                {{ product.Stock }}
+                            </span>
+                            <span *ngSwitchDefault="">0</span>
+                        </td>
+
+                        <td [ngSwitch]="product.Talla">
+                            <span *ngSwitchCase="'M'">
+                                {{ product.Stock }}
+                            </span>
+                            <span *ngSwitchDefault="">0</span>
+                        </td>
+
+                        <td [ngSwitch]="product.Talla">
+                            <span *ngSwitchCase="'L'">
+                                {{ product.Stock }}
+                            </span>
+                            <span *ngSwitchDefault="">0</span>
+                        </td>
+
+                        <td [ngSwitch]="product.Talla">
+                            <span *ngSwitchCase="'XL'">
+                                {{ product.Stock }}
+                            </span>
+                            <span *ngSwitchDefault="">0</span>
+                        </td>
+
+                        <td [ngSwitch]="product.Talla">
+                            <span *ngSwitchCase="'2XL'">
+                                {{ product.Stock }}
+                            </span>
+                            <span *ngSwitchDefault="">0</span>
+                        </td>
+
+                        <td [ngSwitch]="product.Talla">
+                            <span *ngSwitchCase="'3XL'">
+                                {{ product.Stock }}
+                            </span>
+                            <span *ngSwitchDefault="">0</span>
+                        </td>
+
+                        <td [ngSwitch]="product.Talla">
+                            <span *ngSwitchCase="'4XL'">
+                                {{ product.Stock }}
+                            </span>
+                            <span *ngSwitchDefault="">0</span>
+                        </td>
+                        
+
+                        
                     </tr>
                 </tbody>
             </table>

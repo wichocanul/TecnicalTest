@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Product, RestProductsResponse } from '../../interfaces/products.interface';
 import { ProductService } from '../../services/product.service';
 
 @Component({
@@ -9,6 +10,8 @@ import { ProductService } from '../../services/product.service';
 export class HomeComponent {
 
   existError: boolean = false;
+  products : Product[] = [];
+  test: boolean = false;
 
   constructor( private productService: ProductService) { this.showProducts() }
 
@@ -17,10 +20,12 @@ export class HomeComponent {
     this.existError = false;
 
     this.productService.getProducts()
-      .subscribe( (resp) => {
-        console.log(resp.data);
+      .subscribe( (products) => {
+        console.log(products.data);
+        this.products = products.data;
       }, (err) => {
         this.existError = true;
+        this.products = [];
       });
   }
 
