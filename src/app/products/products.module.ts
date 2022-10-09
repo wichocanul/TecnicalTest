@@ -12,6 +12,11 @@ import { DocumentationComponent } from './pages/documentation/documentation.comp
     Error404Component,
     DocumentationComponent
   ],
+  exports:[
+    HomeComponent,
+    Error404Component,
+    DocumentationComponent
+  ],
   imports: [
     CommonModule
   ]
