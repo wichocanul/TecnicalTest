@@ -8,8 +8,19 @@
                     Test Playerytees
                 </div>
                 <ul>
-                    <li>Inicio</li>
-                    <li>Doc</li>
+                    <li
+                        routerLink=""
+                        routerLinkActive="active"
+                        [routerLinkActiveOptions]="{ exact: true }"
+                    >
+                        Inicio
+                    </li>
+                    <li
+                        routerLink="doc"
+                        routerLinkActive="active"
+                    >
+                        Doc
+                    </li>
                 </ul>
             </nav>
         </div>
@@ -17,7 +28,5 @@
     <!-- END HEADER -->
 
     <router-outlet></router-outlet>
-
-    <p>Vidio 9</p>
 
 </div>
