@@ -1,1 +1,88 @@
-/* You can add global styles to this file, and also import other style files */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+nav{
+    margin: 50px 0;
+    width: 100%;
+    height: 60px;
+    background: #ffffff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 40px;
+    border-bottom: 1px solid #eee;
+    box-shadow: 0px 3px 5px #b1b1b1;
+}
+
+.logo{
+    cursor: pointer;
+}
+
+ul{
+    width: auto;
+    margin-top: 17px;
+    display: flex;
+}
+
+ul li{
+    width: 100px;
+    height: 60px;
+    list-style: none;
+    padding: 5px 15px;
+    cursor: pointer;
+    text-align: center;
+    line-height: 50px;
+    transition: .3s all ease;
+}
+
+ul li:hover{
+    background: #75dae8;
+    border-radius: 2px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* TEXTO */
+p{
+    width: 80%;
+    margin: 20px auto;
+}
+
+
+
+/* Styles Table */
+.table-responsive{
+    width: 100%;
+    margin-top: 50px;
+    border-radius: 5px;
+    box-shadow: -3px 3px 5px #b1b1b1;
+}
+
+.header-table{
+    background: #75dae8;
+}
+
+table{
+    width: 100%;
+}
