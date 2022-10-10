@@ -13,6 +13,7 @@ nav{
 
 .logo{
     cursor: pointer;
+    font-weight: bold;
 }
 
 ul{

@@ -1,3 +1,69 @@
-<app-menu></app-menu>
+<div class="row">
+    <div class="col">
+        <h1>Documentación</h1>
+        <hr class="">
+    </div>
+</div>
 
-<p>documentation works!</p>
+<div class="row">
+    <div class="col-12">
+        <h4>Tecnologías utilizadas</h4>
+        <p>Este proyecto fue realizado con Angular en su versión 14.2.5. Para la creación del proyecto se utilizó Angular CLI y eventualmente VisualStudio Code como editor de código, y GitHub como gestor de versiones.</p>
+    </div>
+    <div class="row">
+        <div class="d-flex justify-content-center img-tecnologies">
+            <div class="image">
+                <img src="../../../../assets/images/GitHub.png" alt="GitHub">
+            </div>
+            <div class="image angular">
+                <img src="../../../../assets/images/Angular.png" alt="Angular">
+            </div>
+            <div class="image">
+                <img src="../../../../assets/images/visualStudio.png" alt="Visual Studio">
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-12">
+        <h4>Modulos y Componentes</h4>
+        <p>Se crearon dos módulos en este proyecto, dentro de la carpeta <span class="routes">./src/</span> encontraremos una con el nombre de <span class="bold">Products</span> y otra con el nombre de <span class="bold">shared</span>.</p>
+        <p>En la carpeta <span class="routes">shared/</span> encontraremos todos los componentes que la mayoría de las pestañas utilizaran, estos componentes son: el menú y el footer. Cada una contará con su archivo <span class="routes">.CSS .HTML y .TS</span></p>
+        <p>En la carpeta de <span class="routes">/productos</span> tendremos una carpeta con el nombre de pages, ahí encontraremos todos los componentes que tendrán su propia ventana, utilizando los componentes de shared, al igual que el modulo anterior estos contarán con su archivo <span class="routes">.CSS .HTML y .TS</span></p>
+    </div>
+    <div class="cont-MC d-flex justify-content-center align-items-center">
+        <div class="imgMC">
+            <img src="../../../../assets/images/shared.png" alt="Visual Studio">
+        </div>
+        <div class="imgMC">
+            <img src="../../../../assets/images/pages.png" alt="Visual Studio">
+        </div>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-12">
+        <h4>Rutas</h4>
+        <p>Para las rutas se creo un archivo llamado app-routing.module.ts el cual utiliza los módulos de Angular <span class="routes">import [ RouterModule, Routes ]; from "@angular/router";</span> en la cual solo se agregaron 3 rutas.</p>
+        <ul>
+            <li>La pagina principal (Home)</li>
+            <li>La parte de la documentación (Doc)</li>
+            <li>El Error 404 page not found(**)</li>
+        </ul>
+        <p>Esta ultima solo se podrá ver cuando el usuario edite la URL y la aplicación no encuentre esa ruta como se muestra en la siguiente imagen.</p>
+    </div>
+    <div class="col-12 text-center errorPage">
+        <img src="../../../../assets/images/404Error.png" alt="">
+    </div>
+</div>
+
+<div class="row">
+    <div class="col">
+        <h4>Servicios</h4>
+        <p>Se implemento un archivo en la carpeta Services con el nombre producto.service. Este archivo es el encargado de consultar la API y enviarla a la página principal, esto creando una interfaz de tipo <span class="routes">RestProductsResponse</span> y así poder maquetar cara resultado en la tabla principal.</p>
+    </div>
+    <div class="col-12 text-center interfacePage">
+        <img src="../../../../assets/images/interface.png" alt="">
+    </div>
+</div>

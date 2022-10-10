@@ -1,0 +1,10 @@
+*{
+    background: #272829;
+    color: #fff;
+}
+
+footer{
+    position: relative;
+    padding: 15px 0;
+    bottom: 0px;
+}

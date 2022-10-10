@@ -1,15 +1,12 @@
-/* TEXTO */
 p{
     width: 80%;
     margin: 20px auto;
 }
 
-
-
-/* Styles Table */
 .table-responsive{
     width: 100%;
     margin-top: 50px;
+    margin-bottom: 80px;
     border-radius: 5px;
     box-shadow: -3px 3px 5px #b1b1b1;
 }
